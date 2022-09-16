@@ -1,0 +1,33 @@
+.form_error_tooltip,
+.form_error_tooltip::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+}
+
+.form_error_tooltip_arrow {
+  visibility: hidden;
+}
+
+.form_error_tooltip_arrow::before {
+  visibility: visible;
+  content: '';
+  transform: rotate(45deg);
+}
+
+.form_error_tooltip[data-popper-placement^='top'] > .form_error_tooltip_arrow {
+  bottom: -4px;
+}
+
+.form_error_tooltip[data-popper-placement^='bottom'] > .form_error_tooltip_arrow {
+  top: -4px;
+}
+
+.form_error_tooltip[data-popper-placement^='left'] > .form_error_tooltip_arrow {
+  right: -4px;
+}
+
+#tooltip[data-popper-placement^='right'] > .form_error_tooltip_arrow {
+  left: -4px;
+}
